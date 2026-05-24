@@ -1,14 +1,14 @@
-/* CSS Variables for Harshita's Theme */
+/* Soft romantic theme */
 :root {
-    --primary-pink: #ff5f9e;
-    --secondary-pink: #ffbed2;
-    --accent-pink: #e91e63;
-    --soft-pink: #fff6fa;
-    --deep-pink: #b3124a;
-    --gold: #ffcc70;
+    --primary-pink: #d96f92;
+    --secondary-pink: #f2c6d3;
+    --accent-pink: #b85c76;
+    --soft-pink: #fffaf7;
+    --deep-pink: #8c3f5b;
+    --gold: #d9b08c;
     --white: #FFFFFF;
-    --light-gray: #f9f6f8;
-    --shadow: rgba(179, 18, 74, 0.18);
+    --light-gray: #f7efec;
+    --shadow: rgba(140, 63, 91, 0.12);
     
     /* Beautiful Elegant Fonts */
     --font-heading: 'Great Vibes', cursive;
@@ -17,9 +17,9 @@
     --font-body: 'Poppins', sans-serif;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #ff5f9e, #e91e63, #b3124a);
-    --gradient-soft: linear-gradient(135deg, #fff0f6, #fff9fb, #ffd8e6);
-    --gradient-gold: linear-gradient(135deg, #ffd36b, #ffb347);
+    --gradient-primary: linear-gradient(135deg, #d96f92, #b85c76, #8c3f5b);
+    --gradient-soft: linear-gradient(135deg, #fff9f6, #fffdfb, #f7dfe8);
+    --gradient-gold: linear-gradient(135deg, #e5c49a, #d9b08c);
 }
 
 /* Reset and Base Styles */
@@ -32,10 +32,10 @@
 body {
     font-family: var(--font-body);
     background:
-        radial-gradient(circle at top left, rgba(255, 255, 255, 0.92), transparent 34%),
-        radial-gradient(circle at top right, rgba(255, 192, 203, 0.32), transparent 24%),
-        radial-gradient(circle at bottom left, rgba(255, 159, 184, 0.22), transparent 28%),
-        linear-gradient(135deg, #fff4f7 0%, #ffe8ef 42%, #ffd7e2 100%);
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 34%),
+        radial-gradient(circle at top right, rgba(242, 198, 211, 0.34), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(217, 111, 146, 0.14), transparent 30%),
+        linear-gradient(135deg, #fffaf7 0%, #fff3f7 45%, #f7e4ea 100%);
     min-height: 100vh;
     overflow-x: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -52,7 +52,7 @@ body::after {
 }
 
 body::before {
-    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55) 0 2px, transparent 2px), radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.35) 0 1.5px, transparent 1.5px), radial-gradient(circle at 55% 75%, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px);
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55) 0 2px, transparent 2px), radial-gradient(circle at 80% 30%, rgba(255, 236, 242, 0.46) 0 1.5px, transparent 1.5px), radial-gradient(circle at 55% 75%, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px);
     background-size: 220px 220px, 260px 260px, 280px 280px;
     opacity: 0.7;
 }
@@ -139,7 +139,7 @@ body::after {
     font-family: var(--font-elegant);
     font-size: 1rem;
     letter-spacing: 0.08em;
-    box-shadow: 0 8px 24px rgba(255, 105, 180, 0.14);
+    box-shadow: 0 8px 24px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(12px);
     margin-bottom: 1rem;
 }
@@ -148,19 +148,19 @@ body::after {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 400;
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #e08ba6, #c05f7d, #8c3f5b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(140, 63, 91, 0.08);
     animation: glow 2s ease-in-out infinite alternate;
     letter-spacing: 2px;
 }
 
 @keyframes glow {
-    from { filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.3)); }
-    to { filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.6)); }
+    from { filter: drop-shadow(0 0 10px rgba(224, 139, 166, 0.22)); }
+    to { filter: drop-shadow(0 0 20px rgba(192, 95, 125, 0.38)); }
 }
 
 .subtitle {
@@ -181,9 +181,9 @@ body::after {
     margin: 0 0 2rem;
     padding: 1.4rem 1.5rem;
     border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    box-shadow: 0 16px 40px rgba(179, 18, 74, 0.12);
+    background: rgba(255, 250, 247, 0.82);
+    border: 1px solid rgba(242, 198, 211, 0.7);
+    box-shadow: 0 16px 40px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(16px);
 }
 
@@ -193,7 +193,7 @@ body::after {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 95, 158, 0.55), rgba(255, 210, 221, 0.1), rgba(255, 204, 112, 0.45));
+    background: linear-gradient(135deg, rgba(224, 139, 166, 0.42), rgba(255, 242, 246, 0.1), rgba(217, 176, 140, 0.34));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -227,7 +227,7 @@ body::after {
 .spotlight-pills span {
     padding: 0.7rem 0.95rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, rgba(255, 95, 158, 0.16), rgba(255, 204, 112, 0.14));
+    background: linear-gradient(135deg, rgba(224, 139, 166, 0.14), rgba(217, 176, 140, 0.12));
     color: var(--deep-pink);
     font-weight: 600;
     border: 1px solid rgba(179, 18, 74, 0.08);
@@ -237,11 +237,11 @@ body::after {
 .characters-section {
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.84);
+    background: rgba(255, 250, 247, 0.86);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(242, 198, 211, 0.68);
 }
 
 .character-container {
@@ -255,12 +255,12 @@ body::after {
 .character {
     text-align: center;
     padding: 2rem 1.6rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 239, 245, 0.9));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 245, 248, 0.94));
     border-radius: 1.5rem;
-    box-shadow: 0 14px 35px rgba(179, 18, 74, 0.12);
+    box-shadow: 0 14px 35px rgba(140, 63, 91, 0.1);
     transition: all 0.3s ease;
     min-width: 200px;
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(242, 198, 211, 0.64);
 }
 
 .character:hover {
@@ -282,7 +282,7 @@ body::after {
 .character-svg {
     width: 80px;
     height: 80px;
-    filter: drop-shadow(0 4px 8px var(--shadow));
+    filter: drop-shadow(0 4px 8px rgba(140, 63, 91, 0.08));
 }
 
 .character h3 {
@@ -316,7 +316,7 @@ body::after {
 .heart-svg {
     width: 60px;
     height: 60px;
-    filter: drop-shadow(0 4px 8px var(--shadow));
+    filter: drop-shadow(0 4px 8px rgba(140, 63, 91, 0.08));
 }
 
 /* Interaction Section */
@@ -324,11 +324,11 @@ body::after {
     text-align: center;
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.84);
+    background: rgba(255, 250, 247, 0.86);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(242, 198, 211, 0.68);
 }
 
 .love-btn {
@@ -342,7 +342,7 @@ body::after {
     font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px var(--shadow);
+    box-shadow: 0 8px 25px rgba(140, 63, 91, 0.14);
     margin: 1rem 0;
     letter-spacing: 2px;
     position: relative;
@@ -359,7 +359,7 @@ body::after {
 
 .love-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px var(--shadow);
+    box-shadow: 0 15px 35px rgba(140, 63, 91, 0.16);
 }
 
 .love-btn:hover::after {
@@ -369,7 +369,7 @@ body::after {
     background: var(--gradient-soft);
     padding: 3rem;
     border-radius: 2rem;
-    box-shadow: 0 15px 40px var(--shadow);
+    box-shadow: 0 15px 40px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(15px);
     max-width: 90%;
     margin: 2rem auto;
@@ -380,7 +380,7 @@ body::after {
     pointer-events: none;
     position: relative;
     z-index: 10;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(242, 198, 211, 0.62);
 }
 
 .love-note::before {
@@ -390,7 +390,7 @@ body::after {
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.8rem;
-    filter: drop-shadow(0 10px 20px rgba(255, 105, 180, 0.24));
+    filter: drop-shadow(0 10px 20px rgba(224, 139, 166, 0.22));
 }
 
 .love-note.visible {
@@ -449,11 +449,11 @@ body::after {
 .memory-gallery {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.84);
+    background: rgba(255, 250, 247, 0.86);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(242, 198, 211, 0.68);
 }
 
 .memory-gallery h2 {
@@ -474,14 +474,14 @@ body::after {
 }
 
 .memory-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 239, 245, 0.94));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 245, 248, 0.96));
     padding: 1rem;
     border-radius: 1.5rem;
     text-align: center;
-    box-shadow: 0 14px 35px rgba(179, 18, 74, 0.12);
+    box-shadow: 0 14px 35px rgba(140, 63, 91, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(242, 198, 211, 0.7);
     overflow: hidden;
     position: relative;
 }
@@ -496,8 +496,8 @@ body::after {
     overflow: hidden;
     margin-bottom: 1rem;
     aspect-ratio: 4 / 5;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    background: rgba(255, 248, 250, 0.66);
+    box-shadow: inset 0 0 0 1px rgba(242, 198, 211, 0.22);
     position: relative;
 }
 
@@ -514,7 +514,7 @@ body::after {
     position: absolute;
     inset: auto 0 0 0;
     padding: 0.5rem 0.75rem;
-    background: linear-gradient(180deg, transparent, rgba(17, 17, 17, 0.55));
+    background: linear-gradient(180deg, transparent, rgba(108, 58, 78, 0.52));
     color: white;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
@@ -553,7 +553,7 @@ body::after {
     inset: 0;
     border-radius: inherit;
     border: 1px solid transparent;
-    background: linear-gradient(135deg, rgba(255, 95, 158, 0.38), rgba(255, 204, 112, 0.14)) border-box;
+    background: linear-gradient(135deg, rgba(224, 139, 166, 0.32), rgba(217, 176, 140, 0.12)) border-box;
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
@@ -568,7 +568,7 @@ body::after {
 .photo-modal {
     position: fixed;
     inset: 0;
-    background: rgba(15, 10, 18, 0.5);
+    background: rgba(63, 31, 45, 0.42);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -590,7 +590,7 @@ body::after {
     background: rgba(255, 255, 255, 0.96);
     border-radius: 2rem;
     padding: 1rem;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 30px 80px rgba(63, 31, 45, 0.2);
     position: relative;
     transform: translateY(12px) scale(0.98);
     transition: transform 0.25s ease;
@@ -608,7 +608,7 @@ body::after {
     height: 2.75rem;
     border: none;
     border-radius: 50%;
-    background: rgba(255, 95, 158, 0.12);
+    background: rgba(224, 139, 166, 0.12);
     color: var(--deep-pink);
     font-size: 1.8rem;
     cursor: pointer;
@@ -688,11 +688,12 @@ body::after {
 .love-meter-section {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 250, 247, 0.88);
     border-radius: 2rem;
-    box-shadow: 0 10px 40px var(--shadow);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    backdrop-filter: blur(12px);
     text-align: center;
+    border: 1px solid rgba(242, 198, 211, 0.68);
 }
 
 .love-meter-section h2 {
@@ -705,7 +706,7 @@ body::after {
 
 .love-meter {
     position: relative;
-    background: rgba(255, 182, 193, 0.3);
+    background: rgba(242, 198, 211, 0.3);
     height: 30px;
     border-radius: 15px;
     overflow: hidden;
@@ -743,11 +744,12 @@ body::after {
 .game-section {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 250, 247, 0.88);
     border-radius: 2rem;
-    box-shadow: 0 10px 40px var(--shadow);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    backdrop-filter: blur(12px);
     text-align: center;
+    border: 1px solid rgba(242, 198, 211, 0.68);
 }
 
 .game-section h2 {
