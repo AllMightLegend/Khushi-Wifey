@@ -1,14 +1,14 @@
 /* CSS Variables for Harshita's Theme */
 :root {
-    --primary-pink: #FF69B4;
-    --secondary-pink: #FFB6C1;
-    --accent-pink: #FF1493;
-    --soft-pink: #FFF0F5;
-    --deep-pink: #DC143C;
-    --gold: #FFD700;
+    --primary-pink: #ff5f9e;
+    --secondary-pink: #ffbed2;
+    --accent-pink: #e91e63;
+    --soft-pink: #fff6fa;
+    --deep-pink: #b3124a;
+    --gold: #ffcc70;
     --white: #FFFFFF;
-    --light-gray: #F8F9FA;
-    --shadow: rgba(255, 105, 180, 0.2);
+    --light-gray: #f9f6f8;
+    --shadow: rgba(179, 18, 74, 0.18);
     
     /* Beautiful Elegant Fonts */
     --font-heading: 'Great Vibes', cursive;
@@ -17,9 +17,9 @@
     --font-body: 'Poppins', sans-serif;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #FF69B4, #FF1493, #DC143C);
-    --gradient-soft: linear-gradient(135deg, #FFB6C1, #FFF0F5, #FF69B4);
-    --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+    --gradient-primary: linear-gradient(135deg, #ff5f9e, #e91e63, #b3124a);
+    --gradient-soft: linear-gradient(135deg, #fff0f6, #fff9fb, #ffd8e6);
+    --gradient-gold: linear-gradient(135deg, #ffd36b, #ffb347);
 }
 
 /* Reset and Base Styles */
@@ -31,11 +31,34 @@
 
 body {
     font-family: var(--font-body);
-    background: var(--gradient-soft);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.92), transparent 34%),
+        radial-gradient(circle at top right, rgba(255, 192, 203, 0.32), transparent 24%),
+        radial-gradient(circle at bottom left, rgba(255, 159, 184, 0.22), transparent 28%),
+        linear-gradient(135deg, #fff4f7 0%, #ffe8ef 42%, #ffd7e2 100%);
     min-height: 100vh;
     overflow-x: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     position: relative;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55) 0 2px, transparent 2px), radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.35) 0 1.5px, transparent 1.5px), radial-gradient(circle at 55% 75%, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px);
+    background-size: 220px 220px, 260px 260px, 280px 280px;
+    opacity: 0.7;
+}
+
+body::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 30%, rgba(255, 255, 255, 0.16));
 }
 
 /* Floating Hearts Background */
@@ -90,9 +113,9 @@ body {
 
 /* Main Container */
 .container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.75rem;
     position: relative;
     z-index: 10;
 }
@@ -100,8 +123,25 @@ body {
 /* Header */
 .header {
     text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
+    margin-bottom: 1.75rem;
+    padding: 2.5rem 0 1rem;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: var(--accent-pink);
+    font-family: var(--font-elegant);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    box-shadow: 0 8px 24px rgba(255, 105, 180, 0.14);
+    backdrop-filter: blur(12px);
+    margin-bottom: 1rem;
 }
 
 .main-title {
@@ -132,14 +172,76 @@ body {
     letter-spacing: 1px;
 }
 
+.intro-spotlight {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 0 2rem;
+    padding: 1.4rem 1.5rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 16px 40px rgba(179, 18, 74, 0.12);
+    backdrop-filter: blur(16px);
+}
+
+.intro-spotlight::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 95, 158, 0.55), rgba(255, 210, 221, 0.1), rgba(255, 204, 112, 0.45));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.spotlight-copy h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--deep-pink);
+}
+
+.spotlight-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    color: var(--primary-pink);
+    margin-bottom: 0.55rem;
+    font-weight: 700;
+}
+
+.spotlight-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    justify-content: flex-end;
+}
+
+.spotlight-pills span {
+    padding: 0.7rem 0.95rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 95, 158, 0.16), rgba(255, 204, 112, 0.14));
+    color: var(--deep-pink);
+    font-weight: 600;
+    border: 1px solid rgba(179, 18, 74, 0.08);
+}
+
 /* Characters Section */
 .characters-section {
-    margin: 4rem 0;
+    margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.84);
     border-radius: 2rem;
-    box-shadow: 0 10px 40px var(--shadow);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .character-container {
@@ -152,12 +254,13 @@ body {
 
 .character {
     text-align: center;
-    padding: 2rem;
-    background: var(--gradient-soft);
+    padding: 2rem 1.6rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 239, 245, 0.9));
     border-radius: 1.5rem;
-    box-shadow: 0 8px 25px var(--shadow);
+    box-shadow: 0 14px 35px rgba(179, 18, 74, 0.12);
     transition: all 0.3s ease;
     min-width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 .character:hover {
@@ -201,7 +304,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite, float 5s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -219,12 +322,13 @@ body {
 /* Interaction Section */
 .interaction-section {
     text-align: center;
-    margin: 4rem 0;
+    margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.84);
     border-radius: 2rem;
-    box-shadow: 0 10px 40px var(--shadow);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .love-btn {
@@ -241,11 +345,67 @@ body {
     box-shadow: 0 8px 25px var(--shadow);
     margin: 1rem 0;
     letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.love-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.35) 20%, transparent 40%);
+    transform: translateX(-120%);
 }
 
 .love-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px var(--shadow);
+}
+
+.love-btn:hover::after {
+    animation: shimmer 1.1s ease;
+}
+.love-note {
+    background: var(--gradient-soft);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px var(--shadow);
+    backdrop-filter: blur(15px);
+    max-width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    pointer-events: none;
+    position: relative;
+    z-index: 10;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.love-note::before {
+    content: '💝';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    filter: drop-shadow(0 10px 20px rgba(255, 105, 180, 0.24));
+}
+
+.love-note.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.love-note p {
+    font-family: var(--font-elegant);
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: var(--deep-pink);
+    line-height: 1.8;
+    margin: 0;
+    font-weight: 500;
 }
 
 .love-btn:active {
@@ -289,10 +449,11 @@ body {
 .memory-gallery {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.84);
     border-radius: 2rem;
-    box-shadow: 0 10px 40px var(--shadow);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px rgba(179, 18, 74, 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .memory-gallery h2 {
@@ -307,20 +468,22 @@ body {
 
 .memories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .memory-card {
-    background: var(--gradient-soft);
-    padding: 2rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 239, 245, 0.94));
+    padding: 1rem;
     border-radius: 1.5rem;
     text-align: center;
-    box-shadow: 0 8px 25px var(--shadow);
+    box-shadow: 0 14px 35px rgba(179, 18, 74, 0.12);
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    position: relative;
 }
 
 .memory-card:hover {
@@ -328,10 +491,39 @@ body {
     box-shadow: 0 15px 35px var(--shadow);
 }
 
-.memory-icon {
-    font-size: 3rem;
+.memory-photo-wrap {
+    border-radius: 1rem;
+    overflow: hidden;
     margin-bottom: 1rem;
-    animation: spin 3s linear infinite;
+    aspect-ratio: 4 / 5;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+    position: relative;
+}
+
+.memory-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.memory-photo-wrap::after {
+    content: 'Tap to open';
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 0.5rem 0.75rem;
+    background: linear-gradient(180deg, transparent, rgba(17, 17, 17, 0.55));
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.memory-card:hover .memory-photo {
+    transform: scale(1.05);
 }
 
 @keyframes spin {
@@ -353,6 +545,143 @@ body {
     color: var(--deep-pink);
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+.memory-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, rgba(255, 95, 158, 0.38), rgba(255, 204, 112, 0.14)) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.memory-card:hover::after {
+    opacity: 1;
+}
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 10, 18, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 5000;
+    backdrop-filter: blur(10px);
+}
+
+.photo-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.photo-modal-panel {
+    width: min(900px, 100%);
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+    position: relative;
+    transform: translateY(12px) scale(0.98);
+    transition: transform 0.25s ease;
+}
+
+.photo-modal.open .photo-modal-panel {
+    transform: translateY(0) scale(1);
+}
+
+.photo-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 95, 158, 0.12);
+    color: var(--deep-pink);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.photo-modal-image {
+    width: 100%;
+    max-height: 68vh;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    display: block;
+}
+
+.photo-modal-copy {
+    padding: 1rem 0.4rem 0.4rem;
+    text-align: center;
+}
+
+.photo-modal-copy h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--deep-pink);
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.photo-modal-copy p {
+    color: var(--deep-pink);
+    font-family: var(--font-elegant);
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .intro-spotlight {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .spotlight-pills {
+        justify-content: center;
+    }
+
+    .memories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+
+    .memory-card {
+        padding: 1rem;
+    }
+
+    .memory-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .memory-card p {
+        font-size: 0.98rem;
+    }
+
+    .photo-modal-panel {
+        padding: 0.8rem;
+        border-radius: 1.5rem;
+    }
+
+    .photo-modal-image {
+        max-height: 52vh;
+    }
+}
+
+@keyframes shimmer {
+    from { transform: translateX(-120%); }
+    to { transform: translateX(120%); }
 }
 
 /* Love Meter */

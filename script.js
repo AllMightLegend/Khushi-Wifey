@@ -53,6 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
             if (memoryCare) {
                 memoryCare.textContent = CONFIG.memories.care;
             }
+
+            const memorySweetMoment = document.getElementById('memorySweetMoment');
+            if (memorySweetMoment && CONFIG.memories.sweetMoment) {
+                memorySweetMoment.textContent = CONFIG.memories.sweetMoment;
+            }
+
+            const memoryForeverUs = document.getElementById('memoryForeverUs');
+            if (memoryForeverUs && CONFIG.memories.foreverUs) {
+                memoryForeverUs.textContent = CONFIG.memories.foreverUs;
+            }
             
             // Update special message
             const specialMessageTitle = document.getElementById('specialMessageTitle');
@@ -226,16 +236,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Memory Gallery Interactions
     const memoryCards = document.querySelectorAll('.memory-card');
+    const photoModal = document.getElementById('photoModal');
+    const photoModalImage = document.getElementById('photoModalImage');
+    const photoModalTitle = document.getElementById('photoModalTitle');
+    const photoModalCaption = document.getElementById('photoModalCaption');
+    const photoModalClose = document.getElementById('photoModalClose');
+
+    function openPhotoModal(card) {
+        const photo = card.querySelector('.memory-photo');
+        const heading = card.querySelector('h3');
+        const caption = card.querySelector('p');
+
+        if (!photoModal || !photoModalImage || !photoModalTitle || !photoModalCaption || !photo) {
+            return;
+        }
+
+        photoModalImage.src = photo.src;
+        photoModalImage.alt = photo.alt || heading?.textContent || 'Memory photo';
+        photoModalTitle.textContent = heading ? heading.textContent : 'Memory';
+        photoModalCaption.textContent = caption ? caption.textContent : '';
+        photoModal.classList.add('open');
+        photoModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal() {
+        if (!photoModal) {
+            return;
+        }
+
+        photoModal.classList.remove('open');
+        photoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
     
     memoryCards.forEach(card => {
         card.addEventListener('click', function() {
             const memoryType = this.dataset.memory;
             createMemoryEffect(memoryType);
+            openPhotoModal(this);
             this.style.transform = 'scale(1.05)';
             setTimeout(() => {
                 this.style.transform = 'scale(1)';
             }, 200);
         });
+    });
+
+    if (photoModalClose) {
+        photoModalClose.addEventListener('click', closePhotoModal);
+    }
+
+    if (photoModal) {
+        photoModal.addEventListener('click', function(event) {
+            if (event.target === photoModal) {
+                closePhotoModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePhotoModal();
+        }
     });
 
     // Create memory effects
@@ -253,6 +315,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'care':
                     createHeartRain();
                     showMemoryMessage(window.CONFIG.memoryMessages.care || "Your caring nature, sweet voice, and adorable cuteness melt my heart 💕😍");
+                    break;
+                case 'sweet-moment':
+                    createSparkles();
+                    showMemoryMessage(window.CONFIG.memoryMessages.sweetMoment || "The little moments with you are the ones I hold closest to my heart 💖✨");
+                    break;
+                case 'forever-us':
+                    createStars();
+                    showMemoryMessage(window.CONFIG.memoryMessages.foreverUs || "Every memory with you feels like a promise of forever 💕🌟");
                     break;
             }
         }
