@@ -1,25 +1,25 @@
 /* Soft romantic theme */
 :root {
-    --primary-pink: #d96f92;
-    --secondary-pink: #f2c6d3;
-    --accent-pink: #b85c76;
-    --soft-pink: #fffaf7;
-    --deep-pink: #8c3f5b;
-    --gold: #d9b08c;
+    --primary-pink: #cf6f8f;
+    --secondary-pink: #f0cbd6;
+    --accent-pink: #a95c74;
+    --soft-pink: #fffdfb;
+    --deep-pink: #7a3750;
+    --gold: #d7b08d;
     --white: #FFFFFF;
-    --light-gray: #f7efec;
-    --shadow: rgba(140, 63, 91, 0.12);
+    --light-gray: #f6f0ed;
+    --shadow: rgba(122, 55, 80, 0.11);
     
     /* Beautiful Elegant Fonts */
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Cormorant Garamond', serif;
     --font-elegant: 'Cormorant Garamond', serif;
     --font-special: 'Cormorant Garamond', serif;
     --font-body: 'Poppins', sans-serif;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #d96f92, #b85c76, #8c3f5b);
-    --gradient-soft: linear-gradient(135deg, #fff9f6, #fffdfb, #f7dfe8);
-    --gradient-gold: linear-gradient(135deg, #e5c49a, #d9b08c);
+    --gradient-primary: linear-gradient(135deg, #d67c98, #b9657e, #7a3750);
+    --gradient-soft: linear-gradient(135deg, #fffaf7, #fffefc, #f8e6eb);
+    --gradient-gold: linear-gradient(135deg, #ead1ad, #d7b08d);
 }
 
 /* Reset and Base Styles */
@@ -33,9 +33,9 @@ body {
     font-family: var(--font-body);
     background:
         radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 34%),
-        radial-gradient(circle at top right, rgba(242, 198, 211, 0.34), transparent 26%),
-        radial-gradient(circle at bottom left, rgba(217, 111, 146, 0.14), transparent 30%),
-        linear-gradient(135deg, #fffaf7 0%, #fff3f7 45%, #f7e4ea 100%);
+        radial-gradient(circle at top right, rgba(240, 203, 214, 0.3), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(214, 124, 152, 0.12), transparent 30%),
+        linear-gradient(135deg, #fffdfb 0%, #fff5f8 45%, #f8eaee 100%);
     min-height: 100vh;
     overflow-x: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -52,7 +52,7 @@ body::after {
 }
 
 body::before {
-    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55) 0 2px, transparent 2px), radial-gradient(circle at 80% 30%, rgba(255, 236, 242, 0.46) 0 1.5px, transparent 1.5px), radial-gradient(circle at 55% 75%, rgba(255, 255, 255, 0.22) 0 2px, transparent 2px);
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.55) 0 2px, transparent 2px), radial-gradient(circle at 80% 30%, rgba(255, 236, 242, 0.35) 0 1.5px, transparent 1.5px), radial-gradient(circle at 55% 75%, rgba(255, 255, 255, 0.2) 0 2px, transparent 2px);
     background-size: 220px 220px, 260px 260px, 280px 280px;
     opacity: 0.7;
 }
@@ -133,8 +133,8 @@ body::after {
     justify-content: center;
     padding: 0.65rem 1rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 252, 250, 0.88);
+    border: 1px solid rgba(240, 203, 214, 0.82);
     color: var(--accent-pink);
     font-family: var(--font-elegant);
     font-size: 1rem;
@@ -148,14 +148,14 @@ body::after {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 10vw, 5rem);
     font-weight: 400;
-    background: linear-gradient(135deg, #e08ba6, #c05f7d, #8c3f5b);
+    background: linear-gradient(135deg, #d7839e, #ba5f7c, #7a3750);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(140, 63, 91, 0.08);
     animation: glow 2s ease-in-out infinite alternate;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
 }
 
 @keyframes glow {
@@ -168,7 +168,7 @@ body::after {
     font-size: clamp(1.4rem, 4vw, 2rem);
     color: var(--deep-pink);
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
     letter-spacing: 1px;
 }
 
@@ -181,9 +181,9 @@ body::after {
     margin: 0 0 2rem;
     padding: 1.4rem 1.5rem;
     border-radius: 2rem;
-    background: rgba(255, 250, 247, 0.82);
-    border: 1px solid rgba(242, 198, 211, 0.7);
-    box-shadow: 0 16px 40px rgba(140, 63, 91, 0.1);
+    background: rgba(255, 252, 250, 0.9);
+    border: 1px solid rgba(240, 203, 214, 0.75);
+    box-shadow: 0 16px 40px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(16px);
 }
 
@@ -193,7 +193,7 @@ body::after {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(224, 139, 166, 0.42), rgba(255, 242, 246, 0.1), rgba(217, 176, 140, 0.34));
+    background: linear-gradient(135deg, rgba(215, 131, 158, 0.36), rgba(255, 242, 246, 0.12), rgba(215, 176, 141, 0.28));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -203,8 +203,8 @@ body::after {
 .spotlight-copy h2 {
     font-family: var(--font-heading);
     font-size: clamp(1.9rem, 4vw, 2.7rem);
-    font-weight: 400;
-    line-height: 1.05;
+    font-weight: 500;
+    line-height: 1.12;
     color: var(--deep-pink);
 }
 
@@ -214,7 +214,7 @@ body::after {
     font-size: 0.8rem;
     color: var(--primary-pink);
     margin-bottom: 0.55rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .spotlight-pills {
@@ -227,21 +227,21 @@ body::after {
 .spotlight-pills span {
     padding: 0.7rem 0.95rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, rgba(224, 139, 166, 0.14), rgba(217, 176, 140, 0.12));
+    background: linear-gradient(135deg, rgba(215, 131, 158, 0.12), rgba(215, 176, 141, 0.1));
     color: var(--deep-pink);
     font-weight: 600;
-    border: 1px solid rgba(179, 18, 74, 0.08);
+    border: 1px solid rgba(122, 55, 80, 0.08);
 }
 
 /* Characters Section */
 .characters-section {
     margin: 3rem 0;
     padding: 2rem;
-    background: rgba(255, 250, 247, 0.86);
+    background: rgba(255, 252, 250, 0.9);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 18px 50px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(242, 198, 211, 0.68);
+    border: 1px solid rgba(240, 203, 214, 0.75);
 }
 
 .character-container {
@@ -255,12 +255,12 @@ body::after {
 .character {
     text-align: center;
     padding: 2rem 1.6rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 245, 248, 0.94));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 248, 250, 0.96));
     border-radius: 1.5rem;
-    box-shadow: 0 14px 35px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 14px 35px rgba(122, 55, 80, 0.09);
     transition: all 0.3s ease;
     min-width: 200px;
-    border: 1px solid rgba(242, 198, 211, 0.64);
+    border: 1px solid rgba(240, 203, 214, 0.72);
 }
 
 .character:hover {
@@ -291,7 +291,7 @@ body::after {
     color: var(--primary-pink);
     margin-bottom: 0.5rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .character p {
@@ -342,7 +342,7 @@ body::after {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(140, 63, 91, 0.14);
+    box-shadow: 0 8px 25px rgba(122, 55, 80, 0.12);
     margin: 1rem 0;
     letter-spacing: 2px;
     position: relative;
@@ -359,7 +359,7 @@ body::after {
 
 .love-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(140, 63, 91, 0.16);
+    box-shadow: 0 15px 35px rgba(122, 55, 80, 0.14);
 }
 
 .love-btn:hover::after {
@@ -369,7 +369,7 @@ body::after {
     background: var(--gradient-soft);
     padding: 3rem;
     border-radius: 2rem;
-    box-shadow: 0 15px 40px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 15px 40px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(15px);
     max-width: 90%;
     margin: 2rem auto;
@@ -380,7 +380,7 @@ body::after {
     pointer-events: none;
     position: relative;
     z-index: 10;
-    border: 1px solid rgba(242, 198, 211, 0.62);
+    border: 1px solid rgba(240, 203, 214, 0.7);
 }
 
 .love-note::before {
@@ -390,7 +390,7 @@ body::after {
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.8rem;
-    filter: drop-shadow(0 10px 20px rgba(224, 139, 166, 0.22));
+    filter: drop-shadow(0 10px 20px rgba(215, 131, 158, 0.2));
 }
 
 .love-note.visible {
@@ -449,11 +449,11 @@ body::after {
 .memory-gallery {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 250, 247, 0.86);
+    background: rgba(255, 252, 250, 0.9);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 18px 50px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(242, 198, 211, 0.68);
+    border: 1px solid rgba(240, 203, 214, 0.75);
 }
 
 .memory-gallery h2 {
@@ -462,8 +462,8 @@ body::after {
     text-align: center;
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
 }
 
 .memories-grid {
@@ -474,14 +474,14 @@ body::after {
 }
 
 .memory-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 245, 248, 0.96));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 248, 250, 0.98));
     padding: 1rem;
     border-radius: 1.5rem;
     text-align: center;
-    box-shadow: 0 14px 35px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 14px 35px rgba(122, 55, 80, 0.09);
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid rgba(242, 198, 211, 0.7);
+    border: 1px solid rgba(240, 203, 214, 0.75);
     overflow: hidden;
     position: relative;
 }
@@ -496,8 +496,8 @@ body::after {
     overflow: hidden;
     margin-bottom: 1rem;
     aspect-ratio: 4 / 5;
-    background: rgba(255, 248, 250, 0.66);
-    box-shadow: inset 0 0 0 1px rgba(242, 198, 211, 0.22);
+    background: rgba(255, 248, 250, 0.72);
+    box-shadow: inset 0 0 0 1px rgba(240, 203, 214, 0.2);
     position: relative;
 }
 
@@ -514,7 +514,7 @@ body::after {
     position: absolute;
     inset: auto 0 0 0;
     padding: 0.5rem 0.75rem;
-    background: linear-gradient(180deg, transparent, rgba(108, 58, 78, 0.52));
+    background: linear-gradient(180deg, transparent, rgba(122, 55, 80, 0.42));
     color: white;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
@@ -537,7 +537,7 @@ body::after {
     color: var(--primary-pink);
     margin-bottom: 1rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .memory-card p {
@@ -553,7 +553,7 @@ body::after {
     inset: 0;
     border-radius: inherit;
     border: 1px solid transparent;
-    background: linear-gradient(135deg, rgba(224, 139, 166, 0.32), rgba(217, 176, 140, 0.12)) border-box;
+    background: linear-gradient(135deg, rgba(215, 131, 158, 0.26), rgba(215, 176, 141, 0.1)) border-box;
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
@@ -568,7 +568,7 @@ body::after {
 .photo-modal {
     position: fixed;
     inset: 0;
-    background: rgba(63, 31, 45, 0.42);
+    background: rgba(90, 49, 64, 0.34);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -590,7 +590,7 @@ body::after {
     background: rgba(255, 255, 255, 0.96);
     border-radius: 2rem;
     padding: 1rem;
-    box-shadow: 0 30px 80px rgba(63, 31, 45, 0.2);
+    box-shadow: 0 30px 80px rgba(90, 49, 64, 0.18);
     position: relative;
     transform: translateY(12px) scale(0.98);
     transition: transform 0.25s ease;
@@ -608,7 +608,7 @@ body::after {
     height: 2.75rem;
     border: none;
     border-radius: 50%;
-    background: rgba(224, 139, 166, 0.12);
+    background: rgba(215, 131, 158, 0.12);
     color: var(--deep-pink);
     font-size: 1.8rem;
     cursor: pointer;
@@ -688,12 +688,12 @@ body::after {
 .love-meter-section {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 250, 247, 0.88);
+    background: rgba(255, 252, 250, 0.9);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 18px 50px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(12px);
     text-align: center;
-    border: 1px solid rgba(242, 198, 211, 0.68);
+    border: 1px solid rgba(240, 203, 214, 0.75);
 }
 
 .love-meter-section h2 {
@@ -744,12 +744,12 @@ body::after {
 .game-section {
     margin: 4rem 0;
     padding: 2rem;
-    background: rgba(255, 250, 247, 0.88);
+    background: rgba(255, 252, 250, 0.9);
     border-radius: 2rem;
-    box-shadow: 0 18px 50px rgba(140, 63, 91, 0.1);
+    box-shadow: 0 18px 50px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(12px);
     text-align: center;
-    border: 1px solid rgba(242, 198, 211, 0.68);
+    border: 1px solid rgba(240, 203, 214, 0.75);
 }
 
 .game-section h2 {
@@ -757,7 +757,7 @@ body::after {
     font-size: clamp(2rem, 6vw, 3rem);
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .kiss-counter {
@@ -773,7 +773,7 @@ body::after {
     font-size: 4rem;
     color: var(--primary-pink);
     font-weight: 600;
-    text-shadow: 2px 2px 4px var(--shadow);
+    text-shadow: 2px 2px 4px rgba(122, 55, 80, 0.09);
 }
 
 .kiss-btn {
@@ -787,7 +787,7 @@ body::after {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px var(--shadow);
+    box-shadow: 0 8px 25px rgba(122, 55, 80, 0.12);
 }
 
 .kiss-btn:hover {
@@ -807,10 +807,10 @@ body::after {
     padding: 3rem;
     background: var(--gradient-soft);
     border-radius: 2rem;
-    box-shadow: 0 15px 40px var(--shadow);
+    box-shadow: 0 15px 40px rgba(122, 55, 80, 0.09);
     backdrop-filter: blur(15px);
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(240, 203, 214, 0.7);
 }
 
 .message-container h2 {
@@ -818,7 +818,7 @@ body::after {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .message-container p {
@@ -827,7 +827,7 @@ body::after {
     color: var(--deep-pink);
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .signature {
@@ -889,26 +889,6 @@ body::after {
     
     .love-btn:active, .kiss-btn:active {
         transform: scale(0.98);
-    }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --soft-pink: #2D1B2D;
-        --light-gray: #1A1A1A;
-    }
-    
-    body {
-        background: linear-gradient(135deg, #2D1B2D, #4A1A4A, #6B1B6B);
-    }
-    
-    .character, .memory-gallery, .love-meter-section, .game-section {
-        background: rgba(0, 0, 0, 0.3);
-    }
-    
-    .interaction-section, .special-message {
-        background: rgba(0, 0, 0, 0.2);
     }
 }
 
