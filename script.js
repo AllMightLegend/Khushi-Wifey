@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.style.color = 'white';
         messageDiv.style.padding = '1rem 2rem';
         messageDiv.style.borderRadius = '2rem';
-        messageDiv.style.fontFamily = 'Great Vibes, cursive';
+        messageDiv.style.fontFamily = 'Playfair Display, serif';
         messageDiv.style.fontSize = '1.5rem';
         messageDiv.style.fontWeight = '600';
         messageDiv.style.boxShadow = '0 10px 30px rgba(255, 105, 180, 0.4)';

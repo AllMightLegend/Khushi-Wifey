@@ -11,9 +11,9 @@
     --shadow: rgba(140, 63, 91, 0.12);
     
     /* Beautiful Elegant Fonts */
-    --font-heading: 'Great Vibes', cursive;
+    --font-heading: 'Playfair Display', serif;
     --font-elegant: 'Cormorant Garamond', serif;
-    --font-special: 'Alex Brush', cursive;
+    --font-special: 'Cormorant Garamond', serif;
     --font-body: 'Poppins', sans-serif;
     
     /* Gradients */
@@ -286,18 +286,18 @@ body::after {
 }
 
 .character h3 {
-    font-family: var(--font-special);
+    font-family: var(--font-heading);
     font-size: 2rem;
     color: var(--primary-pink);
     margin-bottom: 0.5rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1px;
 }
 
 .character p {
     font-family: var(--font-elegant);
     color: var(--deep-pink);
-    font-style: italic;
+    font-style: normal;
 }
 
 .love-heart {
@@ -338,8 +338,8 @@ body::after {
     padding: 1.5rem 3rem;
     border-radius: 3rem;
     font-size: clamp(1.3rem, 4vw, 1.8rem);
-    font-family: var(--font-special);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 8px 25px rgba(140, 63, 91, 0.14);
@@ -532,11 +532,11 @@ body::after {
 }
 
 .memory-card h3 {
-    font-family: var(--font-special);
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     color: var(--primary-pink);
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1px;
 }
 
@@ -631,7 +631,7 @@ body::after {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 3rem);
     color: var(--deep-pink);
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.4rem;
 }
 
@@ -701,7 +701,7 @@ body::after {
     font-size: clamp(2rem, 6vw, 3rem);
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .love-meter {
@@ -757,7 +757,7 @@ body::after {
     font-size: clamp(2rem, 6vw, 3rem);
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .kiss-counter {
@@ -772,7 +772,7 @@ body::after {
     font-family: var(--font-heading);
     font-size: 4rem;
     color: var(--primary-pink);
-    font-weight: 700;
+    font-weight: 600;
     text-shadow: 2px 2px 4px var(--shadow);
 }
 
@@ -818,7 +818,7 @@ body::after {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     color: var(--primary-pink);
     margin-bottom: 2rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .message-container p {
@@ -834,9 +834,9 @@ body::after {
     font-family: var(--font-heading);
     font-size: clamp(1.5rem, 4vw, 2rem);
     color: var(--primary-pink);
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 2rem;
-    font-style: italic;
+    font-style: normal;
 }
 
 /* Responsive Design */
